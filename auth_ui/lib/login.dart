@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatelessWidget {
-  const LoginPage({Key? key}) : super(key: key);
+  const LoginPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +15,12 @@ class LoginPage extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 40),
               child: TextField(
-                decoration: InputDecoration(hintText: "Email", fillColor: Colors.grey.shade200, filled: true, border: InputBorder.none),
+                decoration: InputDecoration(
+                  hintText: "Email",
+                  fillColor: Colors.grey.shade200,
+                  filled: true,
+                  border: InputBorder.none,
+                ),
               ),
             ),
             SizedBox(height: 8),
@@ -36,9 +41,16 @@ class LoginPage extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 40),
               child: TextButton(
-                style: ButtonStyle(backgroundColor: MaterialStateProperty.all(Colors.blue)),
+                style: ButtonStyle(
+                  backgroundColor: MaterialStateProperty.all(Colors.blue),
+                ),
                 onPressed: () {},
-                child: Center(child: Padding(padding: const EdgeInsets.all(8.0), child: Text("Login", style: TextStyle(color: Colors.white)))),
+                child: Center(
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text("Login", style: TextStyle(color: Colors.white)),
+                  ),
+                ),
               ),
             ),
             SizedBox(height: 32),
@@ -47,7 +59,10 @@ class LoginPage extends StatelessWidget {
               child: Row(
                 children: [
                   Expanded(child: Divider(color: Colors.black)),
-                  Padding(padding: const EdgeInsets.all(8.0), child: Text("or")),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text("or"),
+                  ),
                   Expanded(child: Divider(color: Colors.black)),
                 ],
               ),
@@ -57,7 +72,10 @@ class LoginPage extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 40),
               child: Container(
                 padding: EdgeInsets.symmetric(vertical: 16),
-                decoration: BoxDecoration(borderRadius: BorderRadius.circular(10), border: Border.all(color: Colors.grey)),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
+                  border: Border.all(color: Colors.grey),
+                ),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -74,7 +92,10 @@ class LoginPage extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 40),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
-                children: [Text("Don't have an account?"), Text("Sign Up", style: TextStyle(color: Colors.blue))],
+                children: [
+                  Text("Already have an account?"),
+                  Text("Sign Up", style: TextStyle(color: Colors.blue)),
+                ],
               ),
             ),
           ],

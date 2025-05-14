@@ -1,4 +1,5 @@
 import 'package:auth_ui/login.dart';
+import 'package:auth_ui/register.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -14,8 +15,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Auth UI',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple)),
-      home: LoginPage(),
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+      ),
+      home: RegisterPage(),
     );
   }
 }
