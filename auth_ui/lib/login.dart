@@ -1,3 +1,4 @@
+import 'package:auth_ui/register.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatelessWidget {
@@ -10,7 +11,11 @@ class LoginPage extends StatelessWidget {
         child: Column(
           children: [
             SizedBox(height: 250),
-            Container(width: 100, height: 100, color: Colors.blue),
+            SizedBox(
+              width: 100,
+              height: 100,
+              child: Image.asset("assets/logo.png"),
+            ),
             SizedBox(height: 80),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 40),
@@ -94,7 +99,18 @@ class LoginPage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text("Already have an account?"),
-                  Text("Sign Up", style: TextStyle(color: Colors.blue)),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => RegisterPage()),
+                      );
+                    },
+                    child: Text(
+                      "Sign Up",
+                      style: TextStyle(color: Colors.blue),
+                    ),
+                  ),
                 ],
               ),
             ),

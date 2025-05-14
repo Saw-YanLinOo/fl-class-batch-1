@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class RegisterPage extends StatelessWidget {
   const RegisterPage({super.key});
@@ -9,9 +10,13 @@ class RegisterPage extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            SizedBox(height: 50),
-            Container(width: 100, height: 100, color: Colors.blue),
-            SizedBox(height: 80),
+            SizedBox(height: 68),
+            SizedBox(
+              width: 100,
+              height: 100,
+              child: Image.asset("assets/logo.png"),
+            ),
+            SizedBox(height: 60),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 40),
               child: TextField(
@@ -94,7 +99,8 @@ class RegisterPage extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Icon(Icons.facebook, color: Colors.blue),
+                    // Icon(FontAwesomeIcons.googlePlus, color: Colors.red[600]),
+                    Image.asset("assets/google_icon.png"),
                     SizedBox(width: 4),
                     Text("Login with Google"),
                   ],
@@ -145,7 +151,12 @@ class RegisterPage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text("Already have an account? "),
-                  Text("Log In", style: TextStyle(color: Colors.blue)),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.pop(context);
+                    },
+                    child: Text("Log In", style: TextStyle(color: Colors.blue)),
+                  ),
                 ],
               ),
             ),
